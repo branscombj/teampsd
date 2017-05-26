@@ -52,5 +52,35 @@ newdata <- subset(mydata, sex=="m" & age> 25,
 #install varhandle package
 unfactor(your_factor_variable)
  
-https://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-an-integer-numeric-without-a-loss-of-information
+https://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-an-integer-numeric-without-a-loss-of-information 
+#clear memoryrm(list=ls())
+#there does not appear to be a universally recommended option for reading Excel data without transformation.#each option has its drawbacks. In fact, most recommend actually just converting to .csv file since many subsequent commands function better that way (although you can definitely lose data in the transformation).#I'm including the read Excel commands in case you're interested
+#possible dependencies you might need:##install.packages("devtools")##install.packages("Rcpp")
+#install library to allow reading Excel data##library(readxl)
+#set and read working file#specify sheet with a number or name#if NAs are represented by something other than blank cells, set NA argument##read_excel("comparatorsites_nov23_16.xlsx", sheet = 1, na = "NULL")-------------------------------------
+#I am going to try the .csv moving forward though  #set working directory: I copied the data file into new folder called ICC in order to make sure that the original Excel file did not get corrupted
+setwd('//vhapalmpncptsd1/Shared Research/TeamPSD/Model Code/ICC')
+file="comparatorsites_nov23_16.csv"
+data=read.csv(file,header=TRUE)
+#if we want to clarify NULL code##data[data==NULL] <-NA ##data <- na.omit(data)
+##LOOK UP na.rm
+##omit Q5 or select for Q1-4 since Q5 is sum of Q1-4
+what does data look like if we look at 6 years of Q5.  vrs. 24 observations of 6 years of Q 1 - Q4
+
+# lowercase namesnames(data) <- tolower(names(data))
+#attach data so that each variable doesn't have to be defined each time you use it
+attach(data)
+
+#run data code to check if you are reading the correct file
+summary(data)
+#to calculate reach for each disorder#Depression EBPsy Reach
+depression_psy_reach <- ((cbt_d_initial_appoints + act_initial_appoints + ipt_initial_appoints)/depression_ebpsyeligible)
+#PTSD EBPsy Reach
+ptsd_psy_reach <- ((pe_initial_appoints) + cpt_initial_appoints)/ptsd_ebpsyeligible
+#DepressionC EBPharm Reach
+depression_pharm_reach <- depression_rx/depression_ebpharmeligible
+#OUD EBPharm Reach
+oud_pharm_reach <- oud_rx/oud_ebpharmeligible
+#install ICC package#information about ICC package: https://cran.r-project.org/web/packages/ICC/ICC.pdfinstall.packages("ICC")
+#starting with ICC for site. ICC = ratio of variance between sites / total varianceICCbareF(x, y, data)
 
