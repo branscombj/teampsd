@@ -1,24 +1,37 @@
-# Team Participatory System Dynamics 
+<img src = "https://github.com/lzim/teampsd/blob/teampsd_style/teampsd_logo/team_psd_logo_sm.png"
+     height = "200" width = "600">  
 
-* Team PSD is using R and rMarkdown to format our participatory system dynamics facilitation resources.
+* Team PSD is using Markdown to format our participatory system dynamics resources for [_Modeling to Learn_](https://mtl.how).
 * Posting our work on GitHub enables transparency, reproducibility and team collaboration.
-* We are also using the RQDA package and the Consolidated Framework for Implementation Reserach (CFIR) to code our PSD Development Process
 
-We are just getting started on our CFIR coding branch https://github.com/LZIM/teampsd/tree/cfir_coding
-For more information about using the CFIR please go to http://cfirguide.org/
+## Works in Progress across Team PSD Workgroups
+**1. Employee Education Services (EES) Workgroup**
+- ees_workgroup
 
-## Our facilitation_guide branch now has 4 learning loop exercises 
+**2. Issue Templates**
+- https://github.com/lzim/teampsd/tree/master/issue_templates/mansucript_tracker
 
-* Building Shared Vision
-* Graphs Over Time 
-* Eliciting Causal Loop Diagrams
-* Ratio Exercise
+**3. Model Workgroup**
+- model_workgroup
 
-These exercises are adapted from https://en.wikibooks.org/wiki/Scriptapedia
-More work to turn this into Facilitation Guide resources is ongoing https://github.com/LZIM/teampsd/tree/facilitation_guide
+**4. *MTL Facilitate* Workgroup**
+  + *MTL Live*
+  + *MTL Video*
+  + *MTL Facilitate*
+  
+**5. Publications Workgroup**
+- pubs_workgroup
 
-* Our first team issue was developing our style sheets for formatting consistency when using rMarkdown.
+**6. Qualitative Workgroup**
+- qual_workgroup
 
-We are still working on that...But, we have added several resources that we are using to create a consistent "loook and feel" for Team PSD resources that is consistent with the VHA Graphics and Style reporting requirements.
+**7. Quantitative Workgroup**
+- quant_workgroup
 
-These resources are growing here: https://github.com/LZIM/teampsd/tree/hexagon_icons
+**8. Shared Team PSD Resources**
+- resources
+
+**9. Simulation User-interface Workgroup**
+- sim_ui_workgroup
+
+**10. VAPOR**
